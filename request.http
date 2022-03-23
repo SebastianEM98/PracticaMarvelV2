@@ -1,0 +1,85 @@
+###
+POST http://localhost:5000/api/v2/superheroes/superhero HTTP/1.1
+Content-Type: application/json
+
+{
+  "superhero_name": "Batman",
+  "real_name": "Bruce Wayne",
+  "features": [{
+    "universe": "DC",
+    "superpowers": ["Money"],
+    "sidekick": [{
+      "sidekick_name": "Robin",
+      "powers": ["Parkour"]
+    }]
+  }]
+}
+
+###
+POST http://localhost:5000/api/v2/superheroes/superhero HTTP/1.1
+Content-Type: application/json
+
+{
+  "superhero_name": "Superman",
+  "real_name": "Clark Joseph Kent",
+  "features": [{
+    "universe": "DC",
+    "superpowers": ["Flight", "Super Strength", "X-Ray Vision"],
+    "sidekick": [{
+      "sidekick_name": "Wonder Woman",
+      "powers": ["Lasso of Truth", "Flight", "Super Strength"]
+    }]
+  }]
+}
+
+###
+POST http://localhost:5000/api/v2/superheroes/superhero HTTP/1.1
+Content-Type: application/json
+
+{
+  "superhero_name": "Iron Man",
+  "real_name": "Tony Stark",
+  "features": [{
+    "universe": "Marvel",
+    "superpowers": ["Genius Level Intellect", "Flight", "Durability", "Many Weapons"],
+    "sidekick": [{
+      "sidekick_name": "War Machine",
+      "powers": ["Flight", "Durability", "Many Weapons"]
+    }]
+  }]
+}
+
+
+###
+GET http://localhost:5000/api/v2/superheroes HTTP/1.1
+
+
+###
+GET http://localhost:5000/api/v2/superheroes/623ac74d8337c0462afef33e HTTP/1.1
+
+
+###
+PUT http://localhost:5000/api/v2/superheroes/623ac2908337c0462afef33a HTTP/1.1
+Content-Type: application/json
+
+{
+  "superhero_name": "Batman",
+  "real_name": "Bruce Wayne",
+  "features": [{
+    "universe": "DC",
+    "superpowers": ["Money", "So much money"],
+    "sidekick": [{
+      "sidekick_name": "Gatubela",
+      "powers": ["Parkour"]
+    }]
+  }]
+}
+
+
+###
+DELETE http://localhost:5000/api/v2/superheroes/623ac4d28337c0462afef33c HTTP/1.1
+
+
+// Consultar los poderes de el ayudante del superheroe
+###
+GET http://localhost:5000/api/v2/superheroes/623ac74d8337c0462afef33e/powers HTTP/1.1
